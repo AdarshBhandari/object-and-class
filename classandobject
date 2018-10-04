@@ -1,0 +1,170 @@
+1)
+import java.util.Scanner;
+class rectangle
+{
+	Scanner s=new Scanner(System.in);
+	double area,length,breadth;
+	rectangle()
+	{
+		length=s.nextDouble();
+		breadth=s.nextDouble();
+	}
+
+	void CalculateArea()
+	{
+		area=(length*breadth);
+		System.out.println("Area Is: " + area);
+	}
+	
+}
+class rect
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter length and breadth of the rectangle: ");
+		rectangle r=new rectangle();
+		r.CalculateArea();	
+	}
+}
+****************************************
+2)
+import java.util.Scanner;
+class comp
+{
+	Scanner s=new Scanner(System.in);
+	int real,com;
+	comp()
+	{
+		real=s.nextInt();
+		com=s.nextInt();
+	}
+
+	void Display()
+	{
+		System.out.println(real + "+" + com + "i");
+	}
+	
+}
+class complex
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter Real and Complex : ");
+		comp c=new comp();
+		c.Display();	
+	}
+}
+******************************************
+3)
+import java.lang.*;
+import java.util.*;
+class second
+{
+    Scanner ss=new Scanner (System.in);
+    int i=0,j,temp;
+    int b[]=new int [10];
+    second()
+    {
+      for(i=0;i<10;i++)
+        {
+          b[i]=ss.nextInt();
+        }  
+    }
+    void sort()
+    {
+      for(i=0;i<10;i++)
+    {
+      for(j=0;j<10;j++)
+      {
+        if(b[i]<b[j])
+        {
+          temp=b[i];
+          b[i]=b[j];
+          b[j]=temp;
+        }
+      }
+    }
+    }
+    void large()
+    {
+      System.out.println("Second Largest Number: " + b[8]);
+    }
+
+}
+class secondlarge
+{
+  public static void main(String [] args)
+  {
+    
+    System.out.println("Enter Ten Elements: ");
+    second s=new second();
+    s.sort();
+    s.large();
+
+  }
+}
+*********************************************
+4)
+class test
+{
+  static int i;
+  static
+  {
+    System.out.println("Static is called");
+  }
+  test()
+  {
+    System.out.println("Constructor is called"); 
+  }
+}
+class staticjava
+{
+  public static void main(String[] args) {
+    test a=new test();
+    
+  }
+}
+**********************************************
+5)
+import java.util.*;
+import java.lang.*;
+
+class flow
+{
+  Scanner q=new Scanner(System.in);
+  int a[]=new int[10];
+  int i,t;
+  flow()
+  {
+    for(i=0;i<10;i++)
+    {
+      a[i]=q.nextInt();
+    }
+  }
+  void wave()
+  {
+    i=0;
+    while(i<9)
+    {
+      t=a[i];
+      a[i]=a[i+1];
+      a[i+1]=t;
+      i=i+2;
+    }
+    for(i=0;i<10;i++)
+    {
+      System.out.print(a[i] + " ");
+    }
+  }
+}
+
+class waveform
+{
+  public static void main(String[] args) 
+  {
+    System.out.println("Enter Elements..");
+    flow f=new flow();
+    f.wave();
+    
+  }
+}
